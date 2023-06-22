@@ -14,3 +14,18 @@
     2. Add HTML
     3. Add SCSS
 ## Search foods - search bar
+## Tag Bar
+    1.Sample in data.js
+    2.get all food and tags method
+    3.Tag route
+    4.Add to home Component
+    5.Add ts
+    6.Add html
+    7.Add css
+## Food page
+    1. Generate food component and method
+    2. Add Route
+    3. Add ts,html,css
+## Cart
+    1. Service
+
