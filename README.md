@@ -15,8 +15,9 @@
 
 ## Not-Found page
 
+## Conecting to Back-End
 
-## Bonus Info
+### Bonus Info
     Although app was made having scss,
     it doesnt actually have it due to some problems with setting up variables.
     Instead it is using only normal css
