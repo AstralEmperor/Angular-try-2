@@ -10,7 +10,7 @@ export class TextInputComponent {
 @Input()
   control!:AbstractControl;
 @Input()
-  showErrorsWhen:boolean = true;
+  showErrorsWhen = true;
 @Input()
   label!:string;
 @Input()

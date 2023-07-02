@@ -10,7 +10,7 @@ export class StarRatingComponent {
   stars!: number;
 
   @Input()
-  size: number = 1;
+  size = 1;
 
   get styles(){
     return{

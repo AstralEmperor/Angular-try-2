@@ -9,7 +9,7 @@ export class DefaultButtonComponent {
   @Input()
   type: 'submit' | 'button' = 'submit'
   @Input()
-  text: string = 'Submit';
+  text = 'Submit';
   @Input()
   bgColor = '#e72929'
   @Input()

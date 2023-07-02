@@ -26,7 +26,7 @@ ngOnInit():void{
   @Input()
   control!:AbstractControl;
   @Input()
-  showErrorsWhen:boolean = true;
+  showErrorsWhen = true;
   errorMessages: string[] = [];
 
   checkValidation(){
