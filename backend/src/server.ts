@@ -1,9 +1,14 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from 'express'
 import cors from 'cors';
 import { sample_foods, sample_tags, sample_users } from './data';
 import jwt from "jsonwebtoken";
 import foodRouter from './routers/food.router';
 import userRouter from './routers/user.router';
+import { dbConnect } from './configs/database.config';
+dbConnect();
 
 const app = express(); // now the app is express application
 app.use(express.json()); //express doesnt use json by default
