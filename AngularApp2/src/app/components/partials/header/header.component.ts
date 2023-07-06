@@ -23,6 +23,6 @@ export class HeaderComponent {
     this.userService.logout();
   }
   get isAuth(){
-    return this.user.token;
+    return this.user.isAdmin;
   }
 }
