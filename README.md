@@ -15,7 +15,13 @@
 
 ## Not-Found page
 
-## Conecting to Back-End
+## Conecting to Back-End --server
+
+## MongoDB 
+
+## Login-page
+
+## Register-page
 
 ### Bonus Info
     Although app was made having scss,
