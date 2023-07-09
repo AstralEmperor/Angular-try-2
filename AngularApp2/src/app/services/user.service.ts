@@ -17,6 +17,9 @@ export class UserService {
   constructor(private http:HttpClient, private toastrService:ToastrService) { 
     this.userObservable = this.userSubject.asObservable();
   }
+  public get currentUser():User{
+    return this.userSubject.value; //latest value of user subject
+  }
 
   login(userLogin:IUserLogin):Observable<User>{
    return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
