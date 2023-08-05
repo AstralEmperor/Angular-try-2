@@ -29,13 +29,38 @@ export const OrderItemSchema = new Schema<OrderItem>(
 );
 
 export interface Order{
-    id: number;
+    id: string;
     items: OrderItem[];
-    totalPrice:number;
-    name:string;
+    totalPrice: number;
+    name: string;
     address: string;
-    addressLatLng:LatLng;
+    addressLatLng: LatLng;
     paymentId: string;
-    createdAt: string;
     status: OrderStatus;
+    user: Types.ObjectId;
+    createdAt: Date;
+    updatedAt: Date;
 }
+
+const orderSchema = new Schema<Order>(  //types in Schema ALWAYS start with capital letter
+    {
+        name:{type: String, required: true},
+        address:{type: String, required: true},
+        addressLatLng:{type: LatLngSchema, required:true},
+        paymentId: {type: String},
+        totalPrice: {type: Number, required: true},
+        items: {type: [OrderItemSchema], required:true},
+        status: {type: String, default: OrderStatus.NEW},
+        user: {type: Schema.Types.ObjectId, required:true},
+    },{
+        timestamps:true,
+        toJSON:{
+            virtuals:true
+        },
+        toObject:{
+            virtuals:true
+        }
+    }//virtual true means you will have id not _id
+    );
+
+    export const OrderModel = model('order', orderSchema);
