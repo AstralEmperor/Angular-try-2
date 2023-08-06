@@ -62,7 +62,7 @@ const generateTokenResponse = (user:any) =>{
     },process.env.JWT_SECRET!, {       //encryption
         expiresIn:"30d"});
 
-//  user.token = token;
+ user.token = token;
  return{
     id:user.id,
     email:user.email,

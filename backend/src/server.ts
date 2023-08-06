@@ -8,6 +8,7 @@ import jwt from "jsonwebtoken";
 import foodRouter from './routers/food.router';
 import userRouter from './routers/user.router';
 import { dbConnect } from './configs/database.config';
+import orderRouter from './routers/order.router';
 dbConnect();
 
 const app = express(); // now the app is express application
@@ -20,6 +21,7 @@ app.use(cors({
 
 app.use("/api/foods", foodRouter);
 app.use("/api/users", userRouter)
+app.use("/api/orders", orderRouter)
 const port = 5000;
 app.listen(port,() => {
     console.log("Website served on http://localhost:" + port);
